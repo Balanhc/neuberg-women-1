@@ -1,0 +1,242 @@
+/* Main CSS for Women's Day Microsite */
+
+:root {
+    --primary-color: #7b2cbf;
+    --primary-light: #9d4edd;
+    --primary-dark: #5a189a;
+    --accent-color: #ff006e;
+    --text-color: #333;
+    --white: #ffffff;
+    --gray-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    padding: 15px 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    max-width: 180px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.top-phone-btn {
+    background: var(--primary-color);
+    color: #fff !important;
+    padding: 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+/* Banner */
+.main-banner {
+    background: #fdf2f8;
+    /* Soft pinkish background */
+    padding-bottom: 50px;
+}
+
+.banner-image-carousel img {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(123, 44, 191, 0.2);
+}
+
+/* Form */
+.form-bg {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-pad h3 {
+    color: var(--primary-color);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+#call-back-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.blackbtns.submit {
+    width: 100%;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.blackbtns.submit:disabled {
+    background: #ccc;
+}
+
+/* Packages */
+.section-padding {
+    padding: 80px 0;
+}
+
+.main-title {
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+.main-title span {
+    color: var(--accent-color);
+}
+
+.packages-bg {
+    background: #fff;
+    border-radius: 20px;
+    border: 2px solid #eee;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.packages-bg:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.packages-content {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.offer-tips {
+    background: var(--accent-color);
+    color: #fff;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.total-tests {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.packages-content h3 {
+    color: var(--primary-color);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.packages-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.packages-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.packages-content ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #444;
+}
+
+.package-footer {
+    background: #fdf2f8;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.new-price {
+    display: block;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.new-price strong {
+    font-size: 24px;
+}
+
+.old-price {
+    display: block;
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+}
+
+.comm-btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Utils */
+.package_div {
+    display: none;
+}
+
+.package_div.show {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    nav {
+        display: none;
+    }
+}
