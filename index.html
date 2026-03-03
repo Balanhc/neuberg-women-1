@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Women’s Day Health Checkup | Neuberg Diagnostics – #NeubergForHer</title>
+    <meta name="description"
+        content="Prioritise her health this Women's Day with Neuberg Diagnostics' Comprehensive Health Check Packages. Accurate results and expert care.">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.neubergdiagnostics.com/static/images/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+
+    <style>
+        /* Embedded CSS - Refined Women's Day Microsite */
+        :root {
+            --neuberg-purple: #7a288a;
+            --light-purple: #f8eff9;
+            --dark-grey: #333;
+            --accent-color: #ff006e;
+            --white: #ffffff;
+        }
+
+        body {
+            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-grey);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+
+        header.sticky-scrolled {
+            padding: 5px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .nav-link {
+            color: var(--dark-grey) !important;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 10px 15px !important;
+        }
+
+        .nav-link:hover {
+            color: var(--neuberg-purple) !important;
+        }
+
+        .text-purple {
+            color: var(--neuberg-purple);
+        }
+
+        .bg-purple {
+            background-color: var(--neuberg-purple);
+        }
+
+        .btn-purple {
+            background-color: var(--neuberg-purple);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-purple:hover {
+            background-color: #5d1e69;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-purple {
+            border: 2px solid var(--neuberg-purple);
+            color: var(--neuberg-purple);
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-purple:hover {
+            background-color: var(--neuberg-purple);
+            color: white;
+        }
+
+        .main-banner {
+            background: linear-gradient(135deg, #ffffff 0%, var(--light-purple) 100%);
+            border-bottom: 4px solid var(--neuberg-purple);
+            padding: 60px 0;
+        }
+
+        .banner-content h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+        }
+
+        .city-banner {
+            display: none;
+            max-height: 450px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .city-banner.show {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .main-banner {
+                padding: 40px 0;
+                text-align: center;
+            }
+
+            .banner-dynamic-image {
+                margin-top: 20px;
+            }
+
+            .city-banner {
+                max-height: 250px;
+                object-position: center;
+            }
+
+            .banner-content .d-flex {
+                justify-content: center;
+                text-align: left;
+            }
+        }
+
+        .form-bg {
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 12px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .border-purple {
+            border: 1px solid var(--neuberg-purple);
+        }
+
+        .form-control:focus {
+            border-color: var(--neuberg-purple);
+            box-shadow: 0 0 0 0.25rem rgba(122, 40, 138, 0.25);
+        }
+
+        .package-card {
+            transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 15px;
+            border-top: 5px solid var(--neuberg-purple) !important;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .total-tests {
+            background: var(--light-purple);
+            color: var(--neuberg-purple);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .home-icon-box {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            margin: 0 auto;
+        }
+
+        .home-icon-box li {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .home-icon-box li:hover {
+            background-color: var(--light-purple);
+        }
+
+        .home-icon-box img {
+            height: 55px;
+            margin-bottom: 15px;
+        }
+
+        .home-icon-box .small {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .home-icon-box .x-small {
+            font-size: 0.8rem;
+        }
+
+        .main-title {
+            font-weight: 800;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+        }
+
+        .main-title span {
+            color: var(--neuberg-purple);
+        }
+
+        .gray-bg {
+            background-color: #fcfcfc;
+        }
+
+        .testimonials-box {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            border-left: 6px solid var(--neuberg-purple);
+            transition: 0.3s;
+        }
+
+        .testimonials-box:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--light-purple);
+            color: var(--neuberg-purple);
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #b3b3b3;
+            padding: 60px 0 0 0;
+        }
+
+        footer a {
+            color: #b3b3b3;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding: 25px 0;
+            margin-top: 40px;
+        }
+
+        .modal-content {
+            border: none;
+            border-radius: 15px;
+        }
+
+        .city-img {
+            object-fit: cover;
+            height: 100%;
+            min-height: 350px;
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                margin-top: 10px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+
+            .nav-link {
+                border-bottom: 1px solid #eee;
+            }
+
+            .nav-link:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body id="home-page">
+
+    <header class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="https://www.neubergdiagnostics.com">
+                    <img src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/logo.png"
+                        alt="Neuberg Logo" height="45">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="#package">Packages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#why-neuberg">Why Neuberg</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <div class="d-flex align-items-center bg-light px-2 rounded">
+                                <img src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/loc.png"
+                                    width="14" class="me-1">
+                                <select class="location_select border-0 bg-transparent py-2" id="header_city_select"
+                                    style="font-size: 0.9rem; outline: none;">
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="header-contact ms-lg-3 d-none d-lg-block">
+                        <a href="tel:+917823946731" class="btn btn-purple btn-sm px-3 city-phone" id="header-phone">
+                            78239 46731
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="main-banner py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <div class="pe-lg-5 banner-content">
+                        <h1 class="display-4 fw-bold text-purple mb-3">#NeubergForHer 💜</h1>
+                        <h2 class="h3 mb-4">Because she checks in on everyone else. <br>It's time to check in on her.
+                        </h2>
+                        <div class="banner-dynamic-image mb-4">
+                            <img class="img-fluid rounded shadow-lg city-banner show banglore_div"
+                                src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/valentine-banner-image-banglore-chennai.jpg"
+                                alt="Women's Day Special">
+                            <img class="img-fluid rounded shadow-lg city-banner chennai_div"
+                                src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/valentine-banner-image-banglore-chennai.jpg"
+                                alt="Women's Day Special">
+                            <img class="img-fluid rounded shadow-lg city-banner mumbai_div"
+                                src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/valentine-banner-image-mumbai.jpg"
+                                alt="Women's Day Special">
+                            <img class="img-fluid rounded shadow-lg city-banner kolkata_div"
+                                src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/valentine-banner-image-kolkatta.jpg"
+                                alt="Women's Day Special">
+                        </div>
+                        <p class="lead text-muted mb-4">A specially curated Women’s Comprehensive Health Check Package,
+                            thoughtfully designed to support preventive care and overall well-being. Valid till 31st
+                            March 2026 | T&C Apply</p>
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/home-icon3.svg"
+                                height="40">
+                            <p class="small mb-0"><strong>Advanced Technology</strong><br>Accurate & Reliable Results
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-bg p-4 shadow-lg border-purple">
+                        <h3 class="h5 fw-bold mb-1">Book a Health Check</h3>
+                        <p class="small text-muted mb-3">Select your city and get a callback.</p>
+                        <form id="call-back-form">
+                            <div class="mb-3">
+                                <input type="text" id="name" class="form-control" placeholder="Full Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="mobile" class="form-control" placeholder="Mobile Number"
+                                    maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required>
+                            </div>
+                            <div class="form-verify-otp mb-3" style="display:none;">
+                                <input type="text" id="otp" class="form-control" placeholder="Enter 4-digit OTP"
+                                    maxlength="4">
+                            </div>
+                            <input type="hidden" name="city" id="input_selected_location" value="Bangalore">
+                            <button type="submit" id="submit_btn" class="btn btn-purple w-100 py-2 fw-bold">Get a Call
+                                Back</button>
+                            <div class="mt-3">
+                                <small class="text-muted" style="font-size: 0.75rem;">I agree to Neuberg Diagnostics <a
+                                        href="https://www.neubergdiagnostics.com/terms-conditions"
+                                        target="_blank">T&C</a> and <a
+                                        href="https://www.neubergdiagnostics.com/privacy-policy" target="_blank">Privacy
+                                        Policy</a></small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="package" class="py-5 gray-bg">
+        <div class="container text-center">
+            <h2 class="main-title">Women's Day <span>Special Packages</span> <img
+                    src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/heart.png"
+                    width="25"></h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="package-card h-100 p-4 bg-white shadow-sm border-0 d-flex flex-column">
+                        <div class="mb-3"><span class="total-tests">65+ Tests</span></div>
+                        <h3 class="h4 fw-bold mb-3">Essential Her Wellness</h3>
+                        <p class="small text-muted mb-4">Comprehensive screening including CBC, Blood Sugar, Thyroid
+                            Profile, Liver & Kidney Function, and essential vitamins.</p>
+                        <div class="mt-auto">
+                            <hr>
+                            <div class="py-3">
+                                <span class="text-muted text-decoration-line-through">₹4,500</span>
+                                <div class="h2 fw-bold text-purple">₹1,999</div>
+                            </div>
+                            <a href="#home-page" class="btn btn-outline-purple w-100 py-2">Book This Test</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="package-card h-100 p-4 bg-white shadow-sm border-0 d-flex flex-column">
+                        <div class="mb-3"><span class="total-tests">85+ Tests</span></div>
+                        <h3 class="h4 fw-bold mb-3">Comprehensive Her Care</h3>
+                        <p class="small text-muted mb-4">Advanced full body assessment including Vitamin B12, Iron
+                            Profile, Electrolytes, Cardiac Markers and everything in Essential care.</p>
+                        <div class="mt-auto">
+                            <hr>
+                            <div class="py-3">
+                                <span class="text-muted text-decoration-line-through">₹7,800</span>
+                                <div class="h2 fw-bold text-purple">₹3,499</div>
+                            </div>
+                            <a href="#home-page" class="btn btn-purple w-100 py-2">Book This Test</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-neuberg" class="py-5">
+        <div class="container">
+            <h2 class="main-title text-center">Why <span>Book Tests</span> With Us?</h2>
+            <ul class="home-icon-box mt-5">
+                <li>
+                    <img
+                        src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/home-icon2.svg">
+                    <p class="small fw-bold">Accurate & Reliable Results</p>
+                    <p class="x-small text-muted">NABL-accredited labs with advanced tech.</p>
+                </li>
+                <li>
+                    <img
+                        src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/home-icon4.svg">
+                    <p class="small fw-bold">Convenient Home Collection</p>
+                    <p class="x-small text-muted">Widest network across 250+ cities.</p>
+                </li>
+                <li>
+                    <img
+                        src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/home-icon5.svg">
+                    <p class="small fw-bold">Fast & Easy Reporting</p>
+                    <p class="x-small text-muted">Reports within 12-48 hours on app/WhatsApp.</p>
+                </li>
+                <li>
+                    <img
+                        src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/home-icon3.svg">
+                    <p class="small fw-bold">100% Honest Pricing</p>
+                    <p class="x-small text-muted">No hidden charges or extra fees.</p>
+                </li>
+                <li>
+                    <img
+                        src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/home-icon6.svg">
+                    <p class="small fw-bold">Trusted by Millions</p>
+                    <p class="x-small text-muted">Serving 70+ lakh patients with expertise.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 mb-4 mb-md-0 d-flex justify-content-center justify-content-md-start">
+                    <img src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/ndme-logo-w.png"
+                        height="40">
+                </div>
+                <div class="col-md-6 mb-4 mb-md-0 text-center">
+                    <div class="d-flex justify-content-center gap-4">
+                        <a href="https://www.facebook.com/NeubergDiagnostics/" target="_blank"><img
+                                src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/facebook.svg"
+                                width="24"></a>
+                        <a href="https://www.instagram.com/neubergdiagnostics/" target="_blank"><img
+                                src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/instagram-icon.svg"
+                                width="24"></a>
+                        <a href="https://in.linkedin.com/company/neuberg-diagnostics" target="_blank"><img
+                                src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/Linked-in.svg"
+                                width="24"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center text-md-end">
+                    <a href="tel:+917823946731" class="fw-bold h5 text-white text-decoration-none city-phone-link"
+                        id="footer-phone">
+                        <img src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/call.png"
+                            width="20" class="me-1"> 78239 46731
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom text-center small">
+                <p class="mb-2">&copy; 2026 Neuberg Diagnostics. All Rights Reserved.</p>
+                <div class="d-flex justify-content-center gap-4 flex-wrap">
+                    <a href="https://www.neubergdiagnostics.com/terms-conditions" target="_blank">Terms & Conditions</a>
+                    <a href="https://www.neubergdiagnostics.com/privacy-policy" target="_blank">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="cityModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-6 p-4 p-md-5">
+                        <h2 class="fw-bold text-purple mb-3">#NeubergForHer 💜</h2>
+                        <p class="text-muted mb-4">Select your city to explore exclusive Women’s Day health offers near
+                            you.</p>
+                        <select id="modal_city_select" class="form-select border-purple py-3 location_select">
+                            <option value="">Select Your City*</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Kolkata">Kolkata</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <img src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/dhoni-v.jpg"
+                            class="w-100 city-img" style="filter: hue-rotate(45deg);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const cityModal = new bootstrap.Modal(document.getElementById('cityModal'));
+            cityModal.show();
+
+            const cityData = {
+                'Bangalore': { phone: '78239 46731', class: 'banglore_div' },
+                'Chennai': { phone: '78239 46735', class: 'chennai_div' },
+                'Mumbai': { phone: '78239 46742', class: 'mumbai_div' },
+                'Kolkata': { phone: '78239 46739', class: 'kolkata_div' }
+            };
+
+            $('.location_select').on('change', function () {
+                const selectedCity = $(this).val();
+                if (!selectedCity) return;
+
+                $('.location_select').val(selectedCity);
+                $('#input_selected_location').val(selectedCity);
+
+                const city = cityData[selectedCity];
+                if (city) {
+                    $('#header-phone').text(city.phone).attr('href', 'tel:+91' + city.phone.replace(/\s/g, ''));
+                    $('#footer-phone').html('<img src="https://www.neubergdiagnostics.com/campaign/valentines-day-offer-2026/static/images/call.png" width="20" class="me-1"> ' + city.phone);
+                    $('#footer-phone').attr('href', 'tel:+91' + city.phone.replace(/\s/g, ''));
+                    $('.city-banner').removeClass('show');
+                    $(`.${city.class}`).addClass('show');
+                }
+                if ($('#cityModal').is(':visible')) cityModal.hide();
+            });
+
+            let otpSent = false;
+            $('#call-back-form').on('submit', function (e) {
+                e.preventDefault();
+                const name = $('#name').val().trim();
+                const mobile = $('#mobile').val().trim();
+                const btn = $('#submit_btn');
+
+                if (!otpSent) {
+                    if (name && mobile.length === 10) {
+                        btn.prop('disabled', true).text('Sending OTP...');
+                        setTimeout(() => {
+                            btn.prop('disabled', false).text('Verify & Call Back');
+                            $('.form-verify-otp').slideDown();
+                            $('#name, #mobile').prop('readonly', true);
+                            otpSent = true;
+                        }, 1000);
+                    } else {
+                        alert('Please enter a valid Name and 10-digit Mobile Number.');
+                    }
+                } else {
+                    const otp = $('#otp').val().trim();
+                    if (otp.length === 4) {
+                        btn.prop('disabled', true).text('Verifying...');
+                        setTimeout(() => {
+                            alert('Thank you, ' + name + '! Our team in ' + $('#input_selected_location').val() + ' will contact you shortly.');
+                            location.reload();
+                        }, 1500);
+                    } else {
+                        alert('Please enter the 4-digit OTP.');
+                    }
+                }
+            });
+
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() > 100) $('header').addClass('sticky-scrolled');
+                else $('header').removeClass('sticky-scrolled');
+            });
+
+            $('.navbar-nav .nav-link').on('click', function () {
+                $('.navbar-collapse').collapse('hide');
+            });
+
+            $('a[href^="#"]').on('click', function (event) {
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({ scrollTop: target.offset().top - 80 }, 100);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
